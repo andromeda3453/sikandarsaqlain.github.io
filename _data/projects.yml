@@ -1,0 +1,17 @@
+- title: "Microservice Video-to-MP3 Converter"
+  description: "Video to MP3 converter app built on the microservice architecture"
+  technologies: Python, Flask, RabbitMQ, Kubernetes, Docker
+  link: "https://github.com/andromeda3453/python-kubernetes"
+  image: "/assets/img/microservice-thumbnail.png"
+
+- title: "Voice-to-PDF AI Agent"
+  description: "An AI-powered assistant that helps doctors complete medical screening forms effortlessly by listening to consultations, transcribing them, and automatically filling in the correct forms. It saves time, reduces paperwork, and lets doctors focus more on patient care than documentation."
+  technologies: Python, FastAPI, OpenAI Whisper, ChatGPT (LLM)
+  link: "https://github.com/andromeda3453/audio-to-pdf-app-ew"
+  image: "/assets/img/aiagent-thumbnail.png"
+
+- title: "NYC Taxi Data ETL Pipeline"
+  description: "Designed and implemented an automated ETL pipeline using Kestra to ingest, transform, and load NYC Taxi data into Google Cloud Storage and BigQuery. The pipeline supports workflow scheduling, error handling, and backfilling for reliable and efficient data processing."
+  technologies: Python, Kestra, Docker, PostgreSQL, Google Cloud Storage, BigQuery
+  link: "https://github.com/andromeda3453/dezoomcamp2025/tree/master/module2/kestra-orchestration/flows"
+  image: "/assets/img/pipeline-thumbnail.png"

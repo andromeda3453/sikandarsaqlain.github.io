@@ -1,0 +1,118 @@
+---
+layout: default
+title: Sikandar Saqlain
+---
+
+<section class="bio reveal">
+    <img class="avatar" src="/assets/img/profile.png" alt="Profile photo" />
+    <div class="bio-text">
+        <h1>Sikandar Saqlain</h1>
+        <p class="role">Software Developer/Data Engineer</p>
+        <p class="about">Hey there 👋 — I’m Sikandar,
+            a Software Developer and Data Engineer enthusiast <br>
+            I love building stuff that people actually use — whether it’s a web app, automation, or something powered by
+            AI.
+            Right now, I’m exploring data engineering and seeing how far I can push what’s possible.
+            At the end of the day, my goal’s simple: <strong>build useful things that make a real impact.</strong></p>
+        <div class="contact">
+            <a href="mailto:sikandarsaqlain99@gmail.com">sikandarsaqlain99@gmail.com</a>
+            <a href="https://www.linkedin.com/in/sikandar-saqlain" target="_blank" rel="noopener" class="linkedin-icon">
+                <img src="/assets/icons/linkedin.svg" alt="LinkedIn">
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="tools-section reveal">
+    <h2>Tools I work with</h2>
+    <div class="tools-container">
+        <!-- Example icons -->
+        <div class="tool" data-tooltip="Python">
+            <img src="assets/icons/python.svg" alt="Python">
+        </div>
+        <div class="tool" data-tooltip="PostgreSQL">
+            <img src="assets/icons/postgresql.svg" alt="PostgreSQL">
+        </div>
+        <div class="tool" data-tooltip="FastAPI">
+            <img src="assets/icons/fastapi.svg" alt="FastAPI">
+        </div>
+        <div class="tool" data-tooltip="HTML">
+            <img src="assets/icons/html5.svg" alt="HTML">
+        </div>
+        <div class="tool" data-tooltip="CSS">
+            <img src="assets/icons/css.svg" alt="CSS">
+        </div>
+        <div class="tool" data-tooltip="JavaScript">
+            <img src="assets/icons/javascript.svg" alt="JavaScript">
+        </div>
+        <div class="tool" data-tooltip="React">
+            <img src="assets/icons/react.svg" alt="React">
+        </div>
+        <div class="tool" data-tooltip="MongoDB">
+            <img src="assets/icons/mongodb.svg" alt="MongoDB">
+        </div>
+        <div class="tool" data-tooltip="n8n">
+            <img src="assets/icons/n8n.svg" alt="n8n">
+        </div>
+        <div class="tool" data-tooltip="Postman">
+            <img src="assets/icons/postman.svg" alt="Postman">
+        </div>
+        <div class="tool" data-tooltip="RabbitMQ">
+            <img src="assets/icons/rabbitmq.svg" alt="RabbitMQ">
+        </div>
+        <div class="tool" data-tooltip="Docker">
+            <img src="assets/icons/docker.svg" alt="Docker">
+        </div>
+        <div class="tool" data-tooltip="Git">
+            <img src="assets/icons/git.svg" alt="Git">
+        </div>
+    </div>
+</section>
+
+
+<section class="projects reveal">
+    <div class="projects-header">
+        <h2>Some projects I've built</h2>
+        <a href="https://github.com/andromeda3453" target="_blank" class="view-more-btn">View More</a>
+    </div>
+
+    <!-- Swiper structure -->
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            {% for p in site.data.projects %}
+            <div class="swiper-slide project-card">
+                <div class="project-info">
+                    <img src="{{ p.image }}" alt="{{ p.title }}" />
+                    <h3>{{ p.title }}</h3>
+                    <p>{{ p.description }}</p>
+                    <p class="tech-stack"><strong>Tech:</strong> {{ p.technologies }}</p>
+                    {% if p.link %}
+                    <a class="btn" href="{{ p.link }}" target="_blank" rel="noopener">View</a>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- pagination / nav -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</section>
+
+<section class="experience reveal">
+    <h2>Work & Experience</h2>
+    <div class="timeline">
+        {% for e in site.data.experience %}
+        <article class="timeline-item">
+            <div class="timeline-date">{{ e.start }} — {{ e.end }}</div>
+            <div class="timeline-body">
+                <h3>{{ e.title }} @ {{ e.company }}</h3>
+                <p class="muted">{{ e.location }}</p>
+                <p>{{ e.description }}</p>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</section>
